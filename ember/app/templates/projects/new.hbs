@@ -1,17 +1,19 @@
-{{#form-for controller action='save'}}
-  <div>
-    {{input name placeholder="App Name"}}
-  </div>
-  <div>
-    {{input app_url placeholder="Deployed URL"}}
-  </div>
-  <div>
-    {{input repo_url placeholder="Repo URL"}}
-  </div>
-  <div>
-    {{input description as="text"}}
-  </div>
-  <div>
-    <button {{action 'save'}}>Create Project</button>
-  </div>
-{{/form-for}}
+<div class="row">
+  {{#form-for controller action='save'}}
+    <div class="small-4 columns">
+      {{input name placeholder="App Name"}}
+    </div>
+    <div class="small-4 columns">
+      {{input app_url placeholder="Deployed URL"}}
+    </div>
+    <div class="small-4 columns">
+      {{input repo_url placeholder="Repo URL"}}
+    </div>
+    <div class="small-4 columns">
+      {{input description as="text"}}
+    </div>
+    <div>
+      <button {{action 'save'}}>Create Project</button>
+    </div>
+  {{/form-for}}
+</div>
