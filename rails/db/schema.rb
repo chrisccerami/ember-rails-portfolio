@@ -14,8 +14,10 @@
 ActiveRecord::Schema.define(version: 20150202034050) do
 
   create_table "projects", force: :cascade do |t|
-    t.string "name",    null: false
-    t.string "app_url", null: false
+    t.string "name",        null: false
+    t.string "app_url",     null: false
+    t.string "repo_url",    null: false
+    t.text   "description", null: false
   end
 
 end

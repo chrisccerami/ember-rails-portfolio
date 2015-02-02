@@ -6,6 +6,12 @@
     {{input app_url placeholder="Deployed URL"}}
   </div>
   <div>
+    {{input repo_url placeholder="Repo URL"}}
+  </div>
+  <div>
+    {{input description as="text"}}
+  </div>
+  <div>
     <button {{action 'save'}}>Create Project</button>
   </div>
 {{/form-for}}

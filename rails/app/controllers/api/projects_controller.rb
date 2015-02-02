@@ -28,6 +28,6 @@ class Api::ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require('project').permit(:name, :app_url)
+    params.require('project').permit(:name, :app_url, :repo_url, :description)
   end
 end
