@@ -10,7 +10,7 @@ class Api::ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      render json: @project, status: :created
+      render json: @project, status: :created, location: api_project_path(@project)
     else
       render json: @project.errors, status: :unprocessable_entity
     end
