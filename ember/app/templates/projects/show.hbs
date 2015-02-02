@@ -9,11 +9,11 @@
 <button {{action 'delete'}}>Delete</button>
 
 <div>
-  URL of Deployed Version: {{app_url}}
+  <a {{bind-attr href="app_url"}}>Deployed Version</a>
 </div>
 <div>
-  URL of GitHub Repo: {{repo_url}}
+  <a {{bind-attr href="repo_url"}}>GitHub Repo</a>
 </div>
-<div>
+<div class="panel">
   Description: {{description}}
 </div>
