@@ -11,7 +11,11 @@ var ProjectsShowController = {
       var project = this.get('model');
       project.save();
       this.set('isEditing', false);
-
+    },
+    delete: function() {
+      var project = this.get('model');
+      project.destroyRecord();
+      this.transitionTo('projects.index');
     }
   }
 };
