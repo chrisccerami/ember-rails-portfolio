@@ -14,6 +14,7 @@
     "ember-qunit-notifications": "0.0.5",
     "qunit": "~1.17.1",
     "pretender": "0.1.0",
-    "ember-easyForm": "http://builds.dockyard.com.s3.amazonaws.com/ember-easyForm/latest/ember-easyForm.js"
+    "ember-easyForm": "http://builds.dockyard.com.s3.amazonaws.com/ember-easyForm/latest/ember-easyForm.js",
+    "foundation": "~5.5.0"
   }
 }
