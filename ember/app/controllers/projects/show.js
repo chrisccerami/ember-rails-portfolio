@@ -8,7 +8,10 @@ var ProjectsShowController = {
     },
 
     doneEditing: function() {
+      var project = this.get('model');
+      project.save();
       this.set('isEditing', false);
+
     }
   }
 };
