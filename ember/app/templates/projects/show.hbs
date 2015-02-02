@@ -1,2 +1,10 @@
 <h4>{{name}}</h4>
+
+{{#if isEditing}}
+  {{partial 'projects/edit'}}
+  <button {{action 'doneEditing'}}>Done</button>
+{{else}}
+  <button {{action 'edit'}}>Edit</button>
+{{/if}}
+
 {{app_url}}

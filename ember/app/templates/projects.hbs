@@ -1,3 +1,14 @@
 <h3>Projects</h3>
 
+{{#each}}
+  <div>
+    {{link-to name 'projects.show' this}}
+  </div>
+{{/each}}
+
+<div>
+  {{link-to "Add a new project" 'projects.new'}}
+</div>
+
+
 {{outlet}}

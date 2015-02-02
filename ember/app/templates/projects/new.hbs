@@ -3,9 +3,9 @@
     {{input name placeholder="App Name"}}
   </div>
   <div>
-    {{input app_url placeholder="URL of Deployed Version"}}
+    {{input app_url placeholder="Deployed URL"}}
   </div>
   <div>
-    {{submit "Create Project"}}
+    <button {{action 'save'}}>Create Project</button>
   </div>
 {{/form-for}}
