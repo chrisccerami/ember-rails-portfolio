@@ -1,0 +1,16 @@
+<div class="content">
+  <div class="row">
+    <div class="small-4 columns">
+      <h3>Blog</h3>
+      {{#each}}
+        <div>
+          {{link-to title 'posts.show' this}}
+        </div>
+      {{/each}}
+
+    {{link-to "Add a New Post" 'posts.new'}}
+    </div>
+
+    {{outlet}}
+  </div>
+</div>

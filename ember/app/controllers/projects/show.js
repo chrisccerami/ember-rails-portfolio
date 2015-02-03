@@ -15,7 +15,7 @@ var ProjectsShowController = {
     delete: function() {
       var project = this.get('model');
       project.destroyRecord();
-      this.transitionTo('projects.index');
+      this.transitionToRoute('projects.index');
     }
   }
 };

@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class Api::PostsController < ApplicationController
   def index
     render json: Post.all
   end
@@ -18,8 +18,8 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.update
-      head: no_content
+    if @post.update(post_params)
+      head :no_content
     else
       render json: @post.errors, status: :unprocessable_entity
     end
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     if @post.destroy
-      head: no_content
+      head :no_content
     else
       render json: @post.errors, status: :unprocessable_entity
     end

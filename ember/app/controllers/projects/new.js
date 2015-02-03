@@ -6,7 +6,7 @@ var ProjectsNewController = {
       var project = this.get('model');
 
       project.save();
-      this.transitionTo('projects.show', project);
+      this.transitionToRoute('projects.show', project);
     },
   }
 };
