@@ -1,0 +1,13 @@
+<div class="small-6 columns">
+  {{#form-for controller action='save'}}
+    <div>
+      {{input title placeholder="Post Title"}}
+    </div>
+    <div>
+      {{input body as="text"}}
+    </div>
+    <div>
+      <button {{action 'save'}}>Save Post</button>
+    </div>
+  {{/form-for}}
+</div>
