@@ -1,19 +1,21 @@
-<div class="row">
-  <div class="small-4 columns">
-    <h3>Projects</h3>
+<div class="projects">
+  <div class="row">
+    <div class="small-4 columns">
+      <h3>Projects</h3>
 
-    {{#each}}
+      {{#each}}
+        <div>
+          {{link-to name 'projects.show' this}}
+        </div>
+      {{/each}}
+
       <div>
-        {{link-to name 'projects.show' this}}
+        {{link-to "Add a new project" 'projects.new'}}
       </div>
-    {{/each}}
-
-    <div>
-      {{link-to "Add a new project" 'projects.new'}}
     </div>
-  </div>
 
-  <div class='small-8 columns'>
-    {{outlet}}
+    <div class='small-8 columns'>
+      {{outlet}}
+    </div>
   </div>
 </div>
