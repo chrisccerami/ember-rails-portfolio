@@ -2,6 +2,12 @@
   <h4>
     {{title}}
   </h4>
+  <div>
+    Posted at: {{created_at}}
+  </div>
+  <div>
+    Last updated at: {{updated_at}}
+  </div>
 
   {{#if isEditing}}
     {{partial 'posts/edit'}}
