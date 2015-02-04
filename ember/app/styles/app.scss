@@ -4,11 +4,20 @@
 
 body {
   background-color:#E3E7DF;
-}
-
-* {
   font-family: ‘Lucida Console’, Monaco, monospace;
   font-size: 10pt;
+}
+
+h2 {
+  font-family: ‘Lucida Console’, Monaco, monospace;
+}
+
+h3 {
+  font-family: ‘Lucida Console’, Monaco, monospace;
+}
+
+h4 {
+  font-family: ‘Lucida Console’, Monaco, monospace;
 }
 
 a {
@@ -33,6 +42,8 @@ button {
   background-color: #D5C8A3;
   color: #1C2130;
   padding: 5px;
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 12pt;
 }
 
 .index {
