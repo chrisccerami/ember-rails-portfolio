@@ -1,12 +1,12 @@
 <div class="small-8 columns panel">
   <h4>
-    {{title}}
+    {{model.title}}
   </h4>
   <div>
-    Posted at: {{created_at}}
+    Posted at: {{model.created_at}}
   </div>
   <div>
-    Last updated at: {{updated_at}}
+    Last updated at: {{model.updated_at}}
   </div>
 
   {{#if isEditing}}
@@ -17,6 +17,26 @@
   {{/if}}
   <button {{action 'delete'}}>Delete</button>
   <div>
-    {{body}}
+    {{model.body}}
+    <h4>Comments</h4>
+    {{#each comment in model.comments}}
+      <div>
+        {{comment.title}}
+      </div>
+      <div>
+        {{comment.body}}
+      </div>
+    {{/each}}
+    {{#form-for newComment action='saveComment'}}
+      <div>
+        {{input title placeholder="Comment Title"}}
+      </div>
+      <div>
+        {{input body as="text"}}
+      </div>
+      <div>
+        <button {{action 'saveComment'}}>Save Comment</button>
+      </div>
+    {{/form-for}}
   </div>
 </div>
