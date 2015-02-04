@@ -4,7 +4,11 @@
 
 body {
   background-color:#E3E7DF;
-  font-size: 24;
+}
+
+* {
+  font-family: ‘Lucida Console’, Monaco, monospace;
+  font-size: 10pt;
 }
 
 a {
@@ -29,4 +33,9 @@ button {
   background-color: #D5C8A3;
   color: #1C2130;
   padding: 5px;
+}
+
+.index {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
