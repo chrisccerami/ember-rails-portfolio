@@ -3,14 +3,30 @@
 @import "foundation";
 
 body {
-  background-color:#4F8B89;
+  background-color:#E3E7DF;
+  font-size: 24;
 }
 
 a {
-  color: #000999
+  color: #028F76
 }
 
 .content {
-  background-color: #62A07B;
-  padding: 10px;
+  background-color: #1C2130;
+  padding: 25px;
+  color: #D5C8A3;
+}
+
+.content h3 {
+  color: #D5C8A3;
+}
+
+button {
+  background-color: #028F76;
+}
+
+.panel {
+  background-color: #D5C8A3;
+  color: #1C2130;
+  padding: 5px;
 }

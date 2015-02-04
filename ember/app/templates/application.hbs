@@ -1,13 +1,17 @@
-<div class="row">
-  <h2 id="title">Web Developer Portfolio</h2>
+<div class="header">
+  <div class="row">
+    <h2 id="title">Chris C Cerami</h2>
+    <h3>Web Developer</h3>
 
-  {{link-to 'Home' 'application'}}
-  {{link-to 'About' 'about'}}
-  {{link-to 'Projects' 'projects'}}
-  {{link-to 'Blog' 'posts'}}
+    {{link-to 'Home' 'application'}}
+    {{link-to 'About' 'about'}}
+    {{link-to 'Projects' 'projects'}}
+    {{link-to 'Blog' 'posts'}}
 
-  <p>This app will feature web apps I've created to show off what an awesome developer I clearly am.</p>
-
-  {{outlet}}
+    <p>This app will feature web apps I've created to show off what an awesome developer I clearly am.</p>
+  </div>
 </div>
 
+<div class="row">
+  {{outlet}}
+</div>
