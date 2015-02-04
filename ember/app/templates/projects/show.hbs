@@ -1,19 +1,21 @@
-<h4>{{name}}</h4>
-
-{{#if isEditing}}
-  {{partial 'projects/edit'}}
-  <button {{action 'doneEditing'}}>Done</button>
-{{else}}
-  <button {{action 'edit'}}>Edit</button>
-{{/if}}
-<button {{action 'delete'}}>Delete</button>
-
-<div>
-  <a {{bind-attr href="app_url"}}>Deployed Version</a>
-</div>
-<div>
-  <a {{bind-attr href="repo_url"}}>GitHub Repo</a>
-</div>
 <div class="panel">
-  Description: {{description}}
+  <h4>{{name}}</h4>
+
+  {{#if isEditing}}
+    {{partial 'projects/edit'}}
+    <button {{action 'doneEditing'}}>Done</button>
+  {{else}}
+    <button {{action 'edit'}}>Edit</button>
+  {{/if}}
+  <button {{action 'delete'}}>Delete</button>
+
+  <div>
+    <a {{bind-attr href="app_url"}}>Deployed Version</a>
+  </div>
+  <div>
+    <a {{bind-attr href="repo_url"}}>GitHub Repo</a>
+  </div>
+  <div>
+    Description: {{description}}
+  </div>
 </div>
