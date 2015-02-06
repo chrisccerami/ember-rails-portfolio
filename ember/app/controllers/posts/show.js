@@ -28,6 +28,9 @@ var PostsShowController = {
         var comment = _this.store.createRecord('comment');
         _this.set('newComment', comment);
       });
+    },
+    deleteComment: function(comment) {
+      comment.destroyRecord();
     }
   }
 };

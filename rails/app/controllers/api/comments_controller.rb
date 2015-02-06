@@ -13,6 +13,15 @@ class Api::CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    comment = Comment.find(params[:id])
+    if comment.destroy
+      head :no_content
+    else
+      render json: comment.errors, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def comment_params
