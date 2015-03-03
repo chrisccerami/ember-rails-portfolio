@@ -1,4 +1,7 @@
 class Api::CommentsController < ApplicationController
+  include Geokit::Geocoders
+  before_action :track_ip, only: [:create, :update, :destroy]
+
   def index
     comments = Comment.all
     render json: comments
@@ -26,5 +29,11 @@ class Api::CommentsController < ApplicationController
 
   def comment_params
     params.require('comment').permit(:title, :body, :created_at, :updated_at, :post_id)
+  end
+
+  def track_ip
+    loc = Geokit::Geocoders::IpGeocoder.geocode(request.ip)
+    visitor = Visitor.create(ip_address: request.ip, params: params,
+                             longitude: loc.lng, latitude: loc.lat)
   end
 end
