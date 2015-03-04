@@ -1,5 +1,6 @@
 class Api::ProjectsController < ApplicationController
   before_action :track_ip, only: [:create, :update, :destroy]
+  before_action :ban_ip, only: [:create, :update, :destroy]
 
   def index
     render json: Project.all
